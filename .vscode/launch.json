@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+      "name": "Run development",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+        "--dart-define=FLAVOR=dev"
+      ]
+    },
+    {
+      "name": "Run staging",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+        "--dart-define=FLAVOR=stg"
+      ]
+    },
+    {
+      "name": "Run production",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+        "--dart-define=FLAVOR=prod"
+      ]
+    },
+    {
+      "name": "stg",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "type": "dart",
+      "args": [
+        "--dart-define=APP_NAME=flutter_test_app.stg",
+        "--dart-define=APP_SUFFIX=.stg",
+        "--dart-define=APP_ENV=stg",
+        "--dart-define=APP_ASSOCIATED_DOMAIN=applinks:com.example.page.link"
+      ]
+    },
+    {
+      "name": "prod",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "type": "dart",
+      "args": [
+        "--dart-define=APP_NAME=flutter_test_app.prod",
+        "--dart-define=APP_ENV=prod",
+        "--dart-define=APP_ASSOCIATED_DOMAIN=applinks:com.example.page.link"
+      ]
+    }
+  ]
+}
